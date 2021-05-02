@@ -4,3 +4,19 @@ variable "instance_type" {}
 variable "ssh_cidr" {}
 variable "tags" {}
 variable "vpc_id" {}
+
+// Database variables
+variable "db_allocated_storage" {}
+variable "db_apply_immediately" {}
+variable "db_availability_zones" {}
+variable "db_engine" {}
+variable "db_engine_version" {}
+variable "db_final_snapshot_identifier" {}
+variable "db_master_username" {}
+variable "db_master_password" {}
+variable "db_name" {}
+variable "db_port" {}
+variable "db_publicly_accessible" {}
+variable "db_instance_class" {}
+variable "db_instance_identifier" {}
+variable "db_skip_final_snapshot" {}

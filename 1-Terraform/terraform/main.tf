@@ -1,4 +1,4 @@
-resource "aws_instanc" "test_instance" {
+resource "aws_instance" "test_instance" {
   ami           = var.ami_id
   instance_type = var.instance_type
   tags          = var.tags
@@ -14,8 +14,8 @@ resource "aws_security_group" "test_instance_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = var.ssh_cidr
-    }
+    cidr_blocks = [var.ssh_cidr]
+  }
 
   egress {
     from_port   = 0
