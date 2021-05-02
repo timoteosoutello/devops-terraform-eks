@@ -73,6 +73,8 @@ Into the container metadata attribute
 
 *kubectl port-forward svc/app 9898:8080 -n test*
 
+*kubectl get all -n test*
+
 ## Question 4
 
 Scale the replicas up to 5 and record the action. Show the recorded action and the new replicas being used
