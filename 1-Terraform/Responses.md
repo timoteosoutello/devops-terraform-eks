@@ -17,6 +17,8 @@ Tried the commands:
 - *terraform init* command in the terraform folder
 
   - Success output result
+    - Remarks: Is possible to provide backend parameters if necessary
+      - *terraform init -backend-config="region=sa-east"*
 
 - *terraform plan -var-file configurations\dev\us-east-1\dev.tf* command in the terraform folder
 
@@ -63,15 +65,11 @@ The terraform would need its state storing and this code has not been added. Ple
 
 Created backend.tf file for that purpose.
 
-Used kubernetes type as it can be saved into eks secret store.
-
-Another common way is: https://www.terraform.io/docs/language/settings/backends/s3.html
-
-Example: https://github.com/timoteosoutello/devops-aws-eks/blob/main/backend.tf
+Used s3 type.
 
 ## Question 3
 
 A new request to add a SQL database has come in. It would interact with the service currently being created here. Please suggest a resource that would fill this requirement and write the terraform to create this.
 
-**Response**: Created an rds.tf for this purpose.
+**Response**: Created an rds.tf for that purpose.
 

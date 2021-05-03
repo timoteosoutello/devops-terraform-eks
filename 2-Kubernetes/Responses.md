@@ -71,9 +71,13 @@ Into the container metadata attribute
 
 *kubectl logs -n test <app_name>*
 
-*kubectl port-forward svc/app 9898:8080 -n test*
+*kubectl proxy --port=8080*
+
+*kubectl port-forward svc/app 8080:8080 -n test*
 
 *kubectl get all -n test*
+
+
 
 ## Question 4
 
@@ -85,7 +89,9 @@ Scale the replicas up to 5 and record the action. Show the recorded action and t
 
 ***Output message**: deployment.apps/app scaled*
 
-*kubectl get pods -n test*
+*kubectl get pods -n test
+
+![5_nodes](images\5_nodes.png)
 
 ## Question 5
 
@@ -98,4 +104,6 @@ Using kubectl, show only the pods IPs and health under the headers IP and HEALTH
 Complete collumns:
 
 *kubectl get pod -o wide -n test*
+
+
 
