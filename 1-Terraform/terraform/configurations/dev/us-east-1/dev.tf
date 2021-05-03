@@ -27,5 +27,5 @@ db_master_username = "root"
 db_master_password = "changeit"
 db_name = "mysqlFreeDB"
 db_port = 5432
-db_publicly_accessible = true
+db_publicly_accessible = false
 db_skip_final_snapshot = false

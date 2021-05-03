@@ -4,7 +4,6 @@ resource "aws_instance" "test_instance" {
   tags          = var.tags
 }
 
-
 resource "aws_security_group" "test_instance_sg" {
   name          = "Test-Instance"
   description   = "Allow SSH traffic"
@@ -22,6 +21,7 @@ resource "aws_security_group" "test_instance_sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-    }
+  }
+  
   tags          = var.tags
 }

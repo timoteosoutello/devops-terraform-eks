@@ -11,5 +11,7 @@ resource "aws_db_instance" "default" {
   publicly_accessible        = var.db_publicly_accessible
   vpc_security_group_ids     = ["${aws_security_group.test_instance_sg.id}"]
   skip_final_snapshot        = var.db_skip_final_snapshot
-  tags          = var.tags
+  tags                       = var.tags
 }
+
+# Ref: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance
