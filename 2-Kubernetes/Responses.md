@@ -91,7 +91,7 @@ Scale the replicas up to 5 and record the action. Show the recorded action and t
 
 *kubectl get pods -n test
 
-![5_nodes](images\5_nodes.png)
+![Example](images/5_nodes.png)
 
 ## Question 5
 
