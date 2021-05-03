@@ -1,0 +1,49 @@
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: test
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app
+  name: app
+  namespace: test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - image: sirfragalot/docker-demo:dcus
+        name: docker-demo
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: app
+  name: app
+  namespace: test
+spec:
+  ports:
+  - name: port-forward
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: app
+  type: LoadBalancer
+status:
+  loadBalancer: {}
