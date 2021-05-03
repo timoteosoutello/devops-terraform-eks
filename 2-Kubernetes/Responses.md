@@ -89,8 +89,6 @@ Scale the replicas up to 5 and record the action. Show the recorded action and t
 
 ***Output message**: deployment.apps/app scaled*
 
-*kubectl get pods -n test
-
 ![Example](images/5_nodes.png)
 
 ## Question 5
